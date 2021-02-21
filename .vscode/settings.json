@@ -8,7 +8,9 @@
 	"unity.h": "c",
 	"libft.h": "c",
 	"__locale": "c",
-	"test.h": "c"
+	"test.h": "c",
+	"stdbool.h": "c",
+	"fcntl.h": "c"
 },
 "editor.detectIndentation": false
 }
