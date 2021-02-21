@@ -13,6 +13,7 @@ cd ~
 # git clone 42_INTRA_REPO_ADDRESS gnl
 git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-cc300066-2eac-4677-add6-aa343962453f-3456870 gnl
 cd gnl
+norminette *.c *.h
 
 # CLONE ALL GITHUB TESTERS
 git clone https://github.com/charMstr/GNL_lover.git
@@ -55,7 +56,6 @@ cd ..
 cd 42cursus_gnl_tests
 mkdir get_next_line
 cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h get_next_line 
-chmod 777 *.sh
 make
 cd ..
 
@@ -66,7 +66,6 @@ cd ..
 
 # RUN Get_Next_Line_Tester
 cd Get_Next_Line_Tester
-chmod 777 *.sh
 bash run.sh
 cd ..
 
