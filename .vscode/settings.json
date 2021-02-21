@@ -1,16 +1,17 @@
 {
   "editor.insertSpaces": false,
   "files.associations": {
-	"exclude": "ignore",
-	"string.h": "c",
-	"stdio.h": "c",
-	"ctype.h": "c",
-	"unity.h": "c",
-	"libft.h": "c",
-	"__locale": "c",
-	"test.h": "c",
-	"stdbool.h": "c",
-	"fcntl.h": "c"
-},
-"editor.detectIndentation": false
+    "exclude": "ignore",
+    "string.h": "c",
+    "stdio.h": "c",
+    "ctype.h": "c",
+    "unity.h": "c",
+    "libft.h": "c",
+    "__locale": "c",
+    "test.h": "c",
+    "stdbool.h": "c",
+    "fcntl.h": "c",
+    "resource.h": "c"
+  },
+  "editor.detectIndentation": false
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 00:07:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/19 23:51:28 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/20 23:36:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <fcntl.h>
+#include <sys/resource.h>
 
 int main()
 {
@@ -85,6 +86,10 @@ int main()
 	printf("F_GETLK: %d\n", F_GETLK);
 	printf("F_GETOWN: %d\n", F_GETOWN);
 	printf("------ fcntl.h ------\n", stdout);
+
+	printf("------ sys/resource.h ------\n", stdout);
+	printf("RLIMIT_NOFILE: %d\n", RLIMIT_NOFILE);
+	printf("------ sys/resource.h ------\n", stdout);
 
 	return (0);
 }

@@ -10,6 +10,7 @@ brew install --HEAD valgrind.rb
 
 # CLONE YOUR PROJECT
 cd ~
+# git clone 42_INTRA_REPO_ADDRESS gnl
 git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-cc300066-2eac-4677-add6-aa343962453f-3456870 gnl
 cd gnl
 
@@ -23,6 +24,7 @@ git clone https://github.com/C4r4c0l3/gnl-war-machine-v2019.git
 git clone https://github.com/Sherchryst/gnlkiller.git
 git clone https://github.com/harm-smits/gnl-unit-test.git
 git clone https://github.com/Tripouille/gnlTester.git
+git clone https://github.com/saarikoski-jules/gnl_unit_tests.git
 chmod 777 */*.sh
 
 # RUN GNL_lover
@@ -34,7 +36,8 @@ cd ..
 # RUN gnl_tester
 cd gnl_tester
 cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h . 
-./run_tests.sh 0
+# ./run_tests.sh 0
+./run_tests.sh 1
 ./run_tests.sh 2
 ./run_tests.sh 3
 ./run_tests.sh 4
@@ -45,7 +48,7 @@ cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h .
 ./run_tests.sh 9999
 ./run_tests.sh 10000000
 ./run_tests.sh 99999999
-./run_tests.sh 9999999999
+# ./run_tests.sh 9999999999
 cd ..
 
 # RUN 42cursus_gnl_tests
@@ -79,13 +82,19 @@ cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h .
 bash test.sh
 cd ..
 
+# RUN gnlTester
+cd gnlTester
+make m
+cd ..
+
 # RUN gnl-unit-test
 cd gnl-unit-test
 cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h . 
 bash test.sh
 cd ..
 
-# RUN gnlTester
-cd gnlTester
-make m
+# RUN gnl_unit_tests
+cd gnl_unit_tests
+sed -i '' "s/PATH_GNL=\"..\/get_next_line\"/../g" run_tests.sh
+sh run_tests.sh
 cd ..
