@@ -22,8 +22,8 @@ core
 *.rb
 ' >> .git/info/exclude
 
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 *.c && ./a.out
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 *.c && time ./a.out
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 *.c && ./a.out
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 *.c && time ./a.out
 
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=0 *.c && ./a.out
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1 *.c && ./a.out

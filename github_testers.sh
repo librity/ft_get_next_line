@@ -72,7 +72,7 @@ cd ..
 
 # RUN gnl-war-machine-v2019
 cd gnl-war-machine-v2019
-sed -i '' "s/..\/..\/get_next_line/../g" my_config.sh
+sed -i '' "s/..\/..\/get_next_line/../" my_config.sh
 ./grademe.sh
 cd ..
 
@@ -95,6 +95,6 @@ cd ..
 
 # RUN gnl_unit_tests
 cd gnl_unit_tests
-sed -i '' "s/PATH_GNL=\"..\/get_next_line\"/../g" run_tests.sh
+sed -i '' "s/PATH_GNL=\"..\/get_next_line\"/PATH_GNL=../" run_tests.sh
 sh run_tests.sh
 cd ..
