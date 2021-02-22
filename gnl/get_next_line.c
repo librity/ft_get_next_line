@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/21 20:33:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/22 00:42:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static char	*initialize_line_buffer(char *read_buffer, bool *found_linebreak)
 	char	*read_linebreak_position;
 	char	*line_linebreak_position;
 	char	*line_buffer;
-	size_t	linebreak_index;
 
 	if (read_buffer[0] == '\0')
 		return (ft_strdup(""));
@@ -51,8 +50,7 @@ static char	*initialize_line_buffer(char *read_buffer, bool *found_linebreak)
 	if (line_buffer == NULL)
 		return (NULL);
 	line_linebreak_position = ft_strchr(line_buffer, '\n');
-	linebreak_index = line_linebreak_position - line_buffer;
-	line_buffer[linebreak_index] = '\0';
+	*line_linebreak_position = '\0';
 	ft_strcpy(read_buffer, read_linebreak_position + 1);
 	return (line_buffer);
 }
@@ -79,7 +77,7 @@ static char	*read_and_join(int fd,
 		if ((linebreak_position = ft_strchr(line_buffer, '\n')) != NULL)
 		{
 			*found_linebreak = true;
-			line_buffer[linebreak_position - line_buffer] = '\0';
+			*linebreak_position = '\0';
 			linebreak_position = ft_strchr(read_buffer, '\n');
 			ft_strcpy(read_buffer, linebreak_position + 1);
 		}

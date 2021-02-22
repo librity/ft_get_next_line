@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 00:07:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/20 23:36:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/22 00:18:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int main()
 	printf("LONG_MIN: %d\n", LONG_MIN);
 	printf("LONG_MAX: %d\n", LONG_MAX);
 	printf("ULONG_MAX: %d\n", ULONG_MAX);
+	printf("SSIZE_MAX: %d\n", SSIZE_MAX);
 	printf("------ limits.h ------\n", stdout);
 
 	printf("------ stdbool.h ------\n", stdout);

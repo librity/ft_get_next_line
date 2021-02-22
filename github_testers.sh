@@ -97,3 +97,7 @@ cd gnl_unit_tests
 sed -i '' "s/PATH_GNL=\"..\/get_next_line\"/PATH_GNL=../" run_tests.sh
 sh run_tests.sh
 cd ..
+
+# CLEANUP
+cd ..
+rm -rf gnl
