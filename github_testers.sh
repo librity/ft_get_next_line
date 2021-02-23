@@ -10,8 +10,7 @@ brew install --HEAD valgrind.rb
 
 # CLONE YOUR PROJECT
 cd ~
-# git clone 42_INTRA_REPO_ADDRESS gnl
-git clone git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-cc300066-2eac-4677-add6-aa343962453f-3456870 gnl
+git clone 42_INTRA_REPO_ADDRESS gnl
 cd gnl
 norminette *.c *.h
 
