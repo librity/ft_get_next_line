@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:14 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/21 20:33:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/03 20:23:31 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 # include <stdbool.h>
+# include <limits.h>
+# include <sys/resource.h>
 
 # define GNL_FOUND_LINEBREAK 1
 # define GNL_FOUND_EOF 0
