@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:22:27 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/03 20:36:26 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/25 03:23:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static bool	bad_params(int file_descriptor, char **line)
 	return (false);
 }
 
-static int last_returns(char *read_buffer, char **line, int bytes_read)
+static int	last_returns(char *read_buffer, char **line, int bytes_read)
 {
 	char *linebreak_position;
 
@@ -50,11 +50,11 @@ static int last_returns(char *read_buffer, char **line, int bytes_read)
 	return (GNL_FOUND_LINEBREAK);
 }
 
-int get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
-	static char read_buffer[BUFFER_SIZE + 1];
-	char *line_buffer;
-	int     bytes_read;
+	static char	read_buffer[BUFFER_SIZE + 1];
+	char		*line_buffer;
+	int			bytes_read;
 
 	if (bad_params(fd, line))
 		return (GNL_ERROR);

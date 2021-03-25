@@ -1,0 +1,34 @@
+# SOURCE: https://github.com/AdrianWR/libft/blame/master/.github/workflows/norminette.yaml
+
+name: norminette
+
+on: push
+
+jobs:
+  linter:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout to project repository
+        uses: actions/checkout@v2
+      - name: Checkout linter from public repository
+        uses: actions/checkout@v2
+        with:
+          repository: 42sp/norminette-client
+          path: linter
+      - name: Set up Ruby version
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
+      - name: Install ruby gem bundler
+        run: gem install bundler
+      - name: Install norminette ruby gem
+        run: (cd linter; bundle)
+      - name: Runs norminette linter
+        run: |
+          # Runs norminette with every .c or .h file on the root dir and its subdirectiores
+          find . -type f \( -name gnl\*.c -o -name gnl\*.h \) -exec sh -c 'linter/norminette.rb {}' \; | tee output
+          echo "NORM_ERRORS=$(grep -E 'Error|Warning' output | wc -l)" >> $GITHUB_ENV
+      - name: Checks norminette linter result
+        run: |
+          echo "Norminette errors found: $NORM_ERRORS"
+          [[ $NORM_ERRORS == 0 ]]
