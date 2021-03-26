@@ -25,8 +25,10 @@ jobs:
         run: (cd linter; bundle)
       - name: Runs norminette linter
         run: |
-          # Runs norminette with every .c or .h file on the root dir and its subdirectiores
-          find . -type f \( -name gnl\*.c -o -name gnl\*.h \) -exec sh -c 'linter/norminette.rb {}' \; | tee output
+          # Runs norminette on every .c and .h file inside includes, libs and sources:
+          find ./includes -type f \( -name \*.c -o -name \*.h \) -exec sh -c 'linter/norminette.rb {}' \; | tee output
+          echo "NORM_ERRORS=$(grep -E 'Error|Warning' output | wc -l)" >> $GITHUB_ENV
+          find ./sources -type f \( -name \*.c -o -name \*.h \) -exec sh -c 'linter/norminette.rb {}' \; | tee output
           echo "NORM_ERRORS=$(grep -E 'Error|Warning' output | wc -l)" >> $GITHUB_ENV
       - name: Checks norminette linter result
         run: |

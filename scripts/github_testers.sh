@@ -1,11 +1,11 @@
 # INSTALL VALGRIND
 cd ~
-rm -rf $HOME/.brew && \
-	git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew && \
-	echo 'export PATH=$HOME/.brew/bin:$PATH' >> $HOME/.zshrc && \
-	source $HOME/.zshrc && \
+rm -rf $HOME/.brew &&
+	git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew &&
+	echo 'export PATH=$HOME/.brew/bin:$PATH' >>$HOME/.zshrc &&
+	source $HOME/.zshrc &&
 	brew update
-curl https://raw.githubusercontent.com/sowson/valgrind/master/valgrind.rb > valgrind.rb
+curl https://raw.githubusercontent.com/sowson/valgrind/master/valgrind.rb >valgrind.rb
 brew install --HEAD valgrind.rb
 
 # CLONE YOUR PROJECT
@@ -29,13 +29,13 @@ chmod 777 */*.sh
 
 # RUN GNL_lover
 cd GNL_lover
-cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h copy_in_here_GNL_files 
+cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h copy_in_here_GNL_files
 ./GNL_lover.sh
 cd ..
 
 # RUN gnl_tester
 cd gnl_tester
-cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h . 
+cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h .
 # ./run_tests.sh 0
 ./run_tests.sh 1
 ./run_tests.sh 2
@@ -54,7 +54,7 @@ cd ..
 # RUN 42cursus_gnl_tests
 cd 42cursus_gnl_tests
 mkdir get_next_line
-cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h get_next_line 
+cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h get_next_line
 make
 cd ..
 
@@ -76,7 +76,7 @@ cd ..
 
 # RUN gnlkiller
 cd gnlkiller
-cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h . 
+cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h .
 bash test.sh
 cd ..
 
@@ -87,7 +87,7 @@ cd ..
 
 # RUN gnl-unit-test
 cd gnl-unit-test
-cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h . 
+cp ../get_next_line.c ../get_next_line_utils.c ../get_next_line.h .
 bash test.sh
 cd ..
 
