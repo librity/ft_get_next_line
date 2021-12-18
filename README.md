@@ -18,10 +18,10 @@
 
 ---
 
-## 📝 Table of Contents
+## 📜 Table of Contents
 
 - [About](#about)
-- [Installation](#getting_started)
+- [Getting Started](#getting_started)
 - [Github Actions](#github_actions)
 - [42 São Paulo](#ft_sp)
 
@@ -128,15 +128,17 @@ $ ./a.out
 [Norminette Github Action](https://github.com/AdrianWR/libft/blob/master/.github/workflows/norminette.yaml)
 by [@AdrianWR](https://github.com/AdrianWR)
 
-## 🏫 42 São Paulo <a name = "ft_sp"></a>
+## 🛸 42 São Paulo <a name = "ft_sp"></a>
 
 Part of the larger [42 Network](https://www.42.fr/42-network/),
 [42 São Paulo](https://www.42sp.org.br/) is a software engineering school
 that offers a healthy alternative to traditional education:
 
-- It doesn't have any teachers or classrooms.
-- Students learn from and correct each other's work (peer-to-peer learning).
-- The method develops technical and social skills.
-- It's completely free to anyone that passes its selection process - **The Piscine**
+- It doesn't have any teachers and classes.
+- Students learn by cooperating
+  and correcting each other's work (peer-to-peer learning).
+- Its focus is as much on social skills as it is on technical skills.
+- It's completely free to anyone that passes its selection process -
+  [**The Piscine**](https://42.fr/en/admissions/42-piscine/)
 
-It's an amazing school, and I'm enjoying every second of it.
+It's an amazing school, and I'm grateful for the opportunity.
